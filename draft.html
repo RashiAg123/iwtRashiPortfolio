@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Me</title>
+<style>
+/* Basic styling for demonstration purposes */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("kj.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Message Me</h2>
+    <form id="contactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+<script>
+    // Basic form validation and email sending
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (!name.trim() || !email.trim() || !message.trim()) {
+            alert('Please fill in all fields');
+            return;
+        }
+
+        // Encode form data into a mailto link
+        const mailtoLink = `mailto:rashiagrawal542@gmail.com?subject=Message%20from%20${encodeURIComponent(name)}&body=${encodeURIComponent(message)}`;
+
+        // Redirect to the mailto link
+        window.location.href = mailtoLink;
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+.menu {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  z-index: 9999;
+}
+
+.name {
+  margin-top: 150px;
+  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGw5OHRwY3l3NHh5c3NicjFqYWJqbHZqbTg0OG5zYnd0NG5kaTNmdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT39CTrFW4nHLdBPpu/giphy-downsized-large.gif);
+  background-size: cover;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-align: center;
+  font-size: 50px;
+  position: relative;
+  z-index: 1; 
+}
+
+.menu a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.menu a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.intro {
+  text-align: center;
+  margin-left: 250px;
+  margin-right: 250px;
+  color: rgb(134, 134, 134);
+}
+
+.cent{
+  background-image: url('bgimg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+
+#contair {
+  height: 650px;
+}
+
+#image {
+  width: 120px;
+  transition: width 2.0s ease;
+  margin-top: 0px
+}
+
+.heddings{
+  text-align: center;
+  font-size: 70px;
+}
+
+.slideshow-container {
+  background-color: #4d355e;
+  text-align: center;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.navigation-bar {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.left-click-area {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  cursor: pointer;
+}
+
+.right-click-area {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  cursor: pointer;
+}
+
+
+.btn-group {
+  display: inline-flex;
+  position: relative;
+  text-align: center;
+}
+.btn-group:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 0;
+  bottom: -12px;
+  left: 0;
+  border-radius: 8px;
+  background: rgba(123, 73, 156, 0.5);
+}
+.btn-group button {
+  color: #3e2e49;
+  font-weight: bold;
+  border: 0;
+  border-bottom: 1px solid #000;
+  outline: none;
+  position: relative;
+  top: 0;
+  padding: 12px 16px;
+  margin: 0 -1px 0 -1px;
+  z-index: 10;
+  transition: top 140ms linear;
+}
+.btn-group button:first-child {
+  border-radius: 8px 0 0 8px;
+  margin: 0;
+}
+.btn-group button:last-child {
+  border-radius: 0 8px 8px 0;
+  margin: 0;
+}
+.btn-group button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  right: 1px;
+  bottom: -12px;
+  z-index: 5;
+  pointer-event: none;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #000;
+  transition: bottom 140ms linear;
+}
+.btn-group button:first-child:before {
+  border-radius: 8px 0 0 8px;
+}
+.btn-group button:last-child:before {
+  border-radius: 0 8px 8px 0;
+}
+.btn-group button:hover {
+  top: 4px;
+}
+.btn-group button:hover:before {
+  bottom: -8px;
+}
+.btn-group button:active {
+  top: 12px;
+}
+.btn-group button:active:before {
+  bottom: 0px;
+}
+
+.pos{
+  text-align: center;
+}
+
+#videoDiv {
+  height: 650px; 
+  position: relative;
+}
+
+#video1 {
+  width: 100%;
+  height: 650px;
+}
+
+#videoMessage { 
+  position: absolute; 
+  top: 0; 
+  left: 0;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+  width: 100%;
+  height: 100%;
+}
+
+#imgge{
+  width: 650px;
+  height: 450px;
+}
+
+.cantt{
+  font-size: 50px;
+  color: whitesmoke;
+}
+
+.back{
+  background-image: url("kj.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(188, 128, 227, 0.681);
+}
+
+.cm {
+  font-size: 30px;
+  text-align: right;
+  color: rgb(255, 255, 255);
+  position: relative; /* Ensure the position is relative */
+  z-index: 1; /* Set a higher z-index to ensure it's above other elements */
+}
+
+.cm a {
+  display: inline-block;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: #ffffff;
+  margin-top: 7%;
+  margin-left: 30%;
+  margin-right: 15%;
+  padding: 20px;
+  border: 7px solid #565656;
+  width: 80%;
+  max-width: 600px;
+}
+
+.close {
+  color: #171717;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
